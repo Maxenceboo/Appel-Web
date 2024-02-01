@@ -1,0 +1,73 @@
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: auto;
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Assuming you want to keep the gradient */
+}
+
+.welcome-group {
+    text-align: center;
+    background-color: white;
+    padding: 5%;
+    border-radius: 10px; /* Smoother border radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    width: 40%;
+    margin: auto; /* Centering the box */
+    max-width: 500px; /* Maximum width */
+}
+
+.welcome-container h1 {
+    color: #333;
+    margin-bottom: 0.5em; /* Adjusted margin */
+    font-size: 2.5rem; /* Larger font size */
+}
+
+.welcome-container h2 {
+    color: #555;
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+}
+
+.welcome-container p {
+    color: #666;
+    margin-bottom: 2em;
+    font-size: 1rem; 
+}
+
+.welcome-container button {
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.welcome-container button:hover {
+    background-color: #5a7be3;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .welcome-group {
+        width: 80%;
+        padding: 10%;
+    }
+
+    .welcome-container h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .welcome-container button {
+        padding: 0.8em 1.2em;
+    }
+}

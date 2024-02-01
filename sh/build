@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ ! "$(command -v docker)" ]; then
+    echo "docker could not be found"
+    exit 0
+fi
+
+dir=$(pwd)
+
+NETWORK_NAME=node-network
+
+if [ ! "$(docker network ls | grep "$NETWORK_NAME")" ]; then
+  echo "Creating network ..."
+  docker network create $NETWORK_NAME
+fi
+
+docker run --rm -it -v $dir:/opt/ -w /opt/ --net $NETWORK_NAME node:18.19.0-buster npm i

@@ -1,0 +1,21 @@
+rdv client
+
+sprint 1 : 
+	- usc 
+	- db
+	- setup env work
+	- processuce diagramme
+
+
+sprint 2 :
+	- start api login
+	- start front login
+	- secure vps
+
+sprint 3 :
+	- setup docker 
+	- front
+	- api
+	- migration knex 
+
+sprint 4 : 
