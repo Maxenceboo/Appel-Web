@@ -6,7 +6,8 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     font-family: 'Arial', sans-serif;
-    padding: 20px;
+    padding: 1rem;
+
 }
 
 
@@ -17,6 +18,18 @@
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+     /* Responsive design */
+     @media (max-width: 768px) { /* Pour tablettes et petits écrans */
+        padding: 2rem;
+        max-width: 30rem;
+    }
+
+    @media (max-width: 480px) { /* Pour téléphones mobiles */
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+    
 }
 
 .appel-container h3 {
@@ -28,6 +41,10 @@
 .liste-etudiants {
     list-style: none;
     padding: 0;
+
+    overflow-y: auto; /* Permet un défilement vertical si le contenu dépasse la hauteur du conteneur */
+    max-height: 40vh; /* Remplacez [hauteur souhaitée] par la hauteur maximale du conteneur */
+
 }
 
 .etudiant {
