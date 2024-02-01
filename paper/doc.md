@@ -30,7 +30,7 @@ https://github.com/Maxenceboo/api-uppa-tools
         - [ ] add/delete eleve in groupe/promo
 - [ ] vue appel
     - [ ] add request
-    - [ ] add scroll bar for container (overflow)
+    - [x] add scroll bar for container (overflow)
 - [ ] vue login
     - [ ] change size of container
 - [ ] vue home
