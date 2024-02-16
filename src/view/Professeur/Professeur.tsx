@@ -12,9 +12,11 @@ const Professeur: React.FC = () => {
     const [selectPromo, setSelectPromo] = useState<string>('');
     const [promo, setPromo] = useState<string[]>([]);
     const [selectGroupe, setSelectGroupe] = useState('');
+    const [groupes, setGroupes] = useState<string[]>([]);
 
 
-    const groupes = ['Groupe 1', 'Groupe 2', 'Groupe 3'];
+
+    // const groupes = ['Groupe 1', 'Groupe 2', 'Groupe 3'];
 
     
     useEffect(() => {
@@ -32,7 +34,6 @@ const Professeur: React.FC = () => {
                 console.log(Error);
             }
         }
-        
         const fetchPromotions = async () => {
             try {
                 const response = await getPromotions();
@@ -42,6 +43,27 @@ const Professeur: React.FC = () => {
             }
         };
         
+        const getGroupes = async () => {
+            let groupes: string[] = [];
+            try {
+                const response = await axios.post('/sousgrp/getSousGrpsByPromo', { libetape: selectPromo });
+                groupes = response.data.map((groupe: any) => groupe.libgroupe);
+                return groupes;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        const fetchGroupes = async () => {
+            try {
+                const response = await getGroupes();
+                setGroupes(response || ['Groupe 1', 'Groupe 2', 'Groupe 3']);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+
+        fetchGroupes();
         fetchPromotions();
     }, []);
     
