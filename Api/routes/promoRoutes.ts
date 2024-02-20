@@ -4,6 +4,4 @@ const router = express.Router();
 
 router.post('/getAllPromo', promoController.getAllPromo);
 
-
-
 export default router;

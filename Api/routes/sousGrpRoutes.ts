@@ -5,6 +5,4 @@ const router = express.Router();
 
 router.get('/getSousGrpsByPromo', sousGrpController.getSousGrpsByPromo);
 
-
-
 export default router;

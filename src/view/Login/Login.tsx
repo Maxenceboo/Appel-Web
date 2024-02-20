@@ -3,8 +3,6 @@ import './Login.css';
 import axios from '../../Axios';
 // import { useHistory } from 'react-router-dom';  //ca sert a faire des redirections dans le code (ex: apres une connexion, on redirige vers la page d'accueil)
 
-
-
 const Login: React.FC = () => {
   // const history = useHistory();
   const [username, setUsername] = useState('');

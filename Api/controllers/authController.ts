@@ -4,10 +4,6 @@ import db from '../config/knexfile'; // Assurez-vous que le chemin d'importation
 import bcrypt from "bcryptjs"
 import jwt, { Secret } from "jsonwebtoken" 
 
-
-
-
-
 export const signin = async (req: Request, res: Response) => {
     try {
         const { login, password } = req.body;
@@ -30,5 +26,3 @@ export const signin = async (req: Request, res: Response) => {
         res.status(500).json({ message: JSON.stringify(error) });
     }
 };
-
-
