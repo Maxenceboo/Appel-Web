@@ -6,6 +6,11 @@ interface Promo {
     libetape: string;
 }
 
+interface Groupe {
+    nom: string;
+}
+
+
 
 const Professeur: React.FC = () => {
 
@@ -31,8 +36,8 @@ const Professeur: React.FC = () => {
     async function fetchGroups () {
         try {
             let groupes: string[] = [];
-            const response = await axios.get('/sousgrp/getSousGrpsByPromo?libetape=' + selectPromo);
-            groupes = response.data.map((groupe: any) => groupe.libgroupe);
+            const response = await axios.get<Groupe[]>('/sousgrp/getSousGrpsByPromo?libetape=' + selectPromo);
+            groupes = response.data.map((groupe) => groupe.nom);
 
             setGroupes(groupes || ['Groupe 1', 'Groupe 2', 'Groupe 3']);
         } catch (error) {

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Responsable.css';
 
+
+
 const Responsable: React.FC = () => {
     // État initial reprenant celui de Professeur avec ajout pour nouvelles promotions et groupes
     const [selectPromo, setSelectPromo] = useState('');
