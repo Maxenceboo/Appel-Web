@@ -2,7 +2,11 @@ import { Request, Response } from 'express';
 import db from '../config/knexfile'; // Assurez-vous que le chemin d'importation est correct
 
 import bcrypt from "bcryptjs"
-import jwt from "jsonwebtoken" 
+import jwt, { Secret } from "jsonwebtoken" 
+
+
+
+
 
 export const signin = async (req: Request, res: Response) => {
     try {
@@ -11,7 +15,7 @@ export const signin = async (req: Request, res: Response) => {
         if (user) {
             const passwordValid = await bcrypt.compare(password, user.password);
             if (passwordValid) {
-                const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+                const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as Secret, { expiresIn: '1h' });
                 res.status(200).json({
                     message: `Utilisateur ${user.id} connecté avec succès`,
                     token
