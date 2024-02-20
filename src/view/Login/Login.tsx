@@ -3,11 +3,9 @@ import './Login.css';
 import axios from '../../Axios';
 // import { useHistory } from 'react-router-dom';  //ca sert a faire des redirections dans le code (ex: apres une connexion, on redirige vers la page d'accueil)
 
-interface LoginProps {
-  // Vous pouvez passer ici des props supplémentaires, par exemple une fonction pour mettre à jour l'état global de l'authentification
-}
 
-const Login: React.FC<LoginProps> = () => {
+
+const Login: React.FC = () => {
   // const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

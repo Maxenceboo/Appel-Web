@@ -51,7 +51,7 @@ const Appel: React.FC = () => {
                 <h3>le cours</h3>
                 <p>Cochez les étudiants présents</p>
                 <ul className="liste-etudiants">
-                    {etudiants.map(etudiant => (
+                    {etudiants && etudiants.map(etudiant => (
                         <li key={etudiant.id} className={`etudiant ${etudiant.present ? 'present' : 'absent'}`}>
                             <label className='label'>
                                 <input

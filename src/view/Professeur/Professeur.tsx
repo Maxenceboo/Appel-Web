@@ -9,62 +9,41 @@ interface Promo {
 
 const Professeur: React.FC = () => {
 
-    const [selectPromo, setSelectPromo] = useState<string>('');
+    const [selectPromo, setSelectPromo] = useState('');
     const [promo, setPromo] = useState<string[]>([]);
     const [selectGroupe, setSelectGroupe] = useState('');
     const [groupes, setGroupes] = useState<string[]>([]);
 
 
 
-    // const groupes = ['Groupe 1', 'Groupe 2', 'Groupe 3'];
+    async function fetchPromotions () {
+        try {
+            let promotions: string[] = [];
+            const response = await axios.get<Promo[]>('/promo/getAllPromo');
 
+            promotions = response.data.map((promo) => promo.libetape);
+            setPromo(promotions || ['Licence 1 NEC', 'Licence 2 NEC', 'Licence 3 NEC']);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    async function fetchGroups () {
+        try {
+            let groupes: string[] = [];
+            const response = await axios.get('/sousgrp/getSousGrpsByPromo?libetape=' + selectPromo);
+            groupes = response.data.map((groupe: any) => groupe.libgroupe);
+
+            setGroupes(groupes || ['Groupe 1', 'Groupe 2', 'Groupe 3']);
+        } catch (error) {
+            console.log(error);
+        }
+    }
     
     useEffect(() => {
-        const getPromotions = async () => {
-            
-            let promotions: string[] = [];
-            
-            try{
-                const response = await axios.get('/promo/getAllPromo');
-                promotions = response.data.map((promo: Promo) => promo.libetape);
-                return promotions;
-            } catch (error) {
-                console.log(error);
-            } finally {
-                console.log(Error);
-            }
-        }
-        const fetchPromotions = async () => {
-            try {
-                const response = await getPromotions();
-                setPromo(response || ['Licence 1 NEC', 'Licence 2 NEC', 'Licence 3 NEC']);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        
-        const getGroupes = async () => {
-            let groupes: string[] = [];
-            try {
-                const response = await axios.post('/sousgrp/getSousGrpsByPromo', { libetape: selectPromo });
-                groupes = response.data.map((groupe: any) => groupe.libgroupe);
-                return groupes;
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        const fetchGroupes = async () => {
-            try {
-                const response = await getGroupes();
-                setGroupes(response || ['Groupe 1', 'Groupe 2', 'Groupe 3']);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-
-
-        fetchGroupes();
-        fetchPromotions();
+        fetchGroups();
+        fetchPromotions()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
 
@@ -88,7 +67,7 @@ const Professeur: React.FC = () => {
                         value={selectPromo} 
                         onChange={(e) => setSelectPromo(e.target.value)}
                     >
-                        <option value="" disabled>Sélectionnez une promotion</option>
+                        <option value="" disabled>Selectionnez une promotion</option>
                         {promo.map((promo: string, index: number) => (
                             <option key={index} value={promo}>{promo}</option>
                         ))}

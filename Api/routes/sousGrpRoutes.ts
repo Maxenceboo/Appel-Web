@@ -3,7 +3,7 @@ import * as sousGrpController from '../controllers/sousGrpController';
 
 const router = express.Router();
 
-router.post('/getSousGrpsByPromo', sousGrpController.getSousGrpsByPromo);
+router.get('/getSousGrpsByPromo', sousGrpController.getSousGrpsByPromo);
 
 
 

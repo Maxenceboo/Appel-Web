@@ -32,7 +32,6 @@ const Responsable: React.FC = () => {
 
     return (
         <div className="responsable-dashboard">
-            
             <div className="responsable-selection-container">
                 <h1>Tableau de bord - Gestionnaire</h1>
                 {/* Sélection des promotions et des groupes existants */}
@@ -44,7 +43,7 @@ const Responsable: React.FC = () => {
                         onChange={(e) => setSelectPromo(e.target.value)}
                     >
                         <option value="" disabled>Sélectionnez une promotion</option>
-                        {promotions.map((promo, index) => (
+                        {promotions && promotions.map((promo, index) => (
                             <option key={index} value={promo}>{promo}</option>
                         ))}
                     </select>
@@ -58,7 +57,7 @@ const Responsable: React.FC = () => {
                         disabled={!selectPromo}
                     >
                         <option value="" disabled>Sélectionnez un groupe</option>
-                        {groupes.map((groupe, index) => (
+                        {groupes && groupes.map((groupe, index) => (
                             <option key={index} value={groupe}>{groupe}</option>
                         ))}
                     </select>

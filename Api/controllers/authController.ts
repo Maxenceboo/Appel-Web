@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import db from '../config/knexfile'; // Assurez-vous que le chemin d'importation est correct
 
-const bcrypt = require("bcryptjs"); // Import bcrypt
-const jwt = require("jsonwebtoken");    // Import jsonwebtoken
+import bcrypt from "bcryptjs"
+import jwt from "jsonwebtoken" 
 
 export const signin = async (req: Request, res: Response) => {
     try {
@@ -23,7 +23,7 @@ export const signin = async (req: Request, res: Response) => {
             res.status(404).json({ message: 'Utilisateur non trouvé' });
         }
     } catch (error) {
-        res.status(500).json({ message: (error as Error).message });
+        res.status(500).json({ message: JSON.stringify(error) });
     }
 };
 

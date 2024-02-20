@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, Navigate} from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 
 const Home: React.FC = () => {

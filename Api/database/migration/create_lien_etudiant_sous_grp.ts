@@ -1,8 +1,6 @@
 import { Knex } from "knex";
 
-
-
-exports.up = function(knex: Knex) {
+export function up (knex: Knex) {
     return knex.schema.createTable('lien_etudiant_sous_grp', (table) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         // foreigh key
@@ -13,7 +11,7 @@ exports.up = function(knex: Knex) {
     })
 }
 
-exports.down = function(knex: Knex) {
+export function down(knex: Knex) {
     knex.schema.dropTable('lien_etudiant_sous_grp');
   };
 

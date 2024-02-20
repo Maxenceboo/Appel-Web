@@ -39,8 +39,6 @@ app.use('/api/auth', authRoutes); // Use the authRoutes router for all routes st
 app.use('/api/promo', promoRoutes); // Use the promoRoutes router for all routes starting with /promo
 app.use('/api/sousgrp', promoRoutes); // Use the promoRoutes router for all routes starting with /promo
 
-
-
 app.use((req: Request, res: Response, next: NextFunction) => { // Handle 404 errors
     const error: ErrorWithStatus = new Error('Not found');
     error.status = 404;
