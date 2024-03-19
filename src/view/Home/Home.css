@@ -1,0 +1,49 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.home-container h1, .home-container p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    width: 150px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.navigation-buttons a {
+    text-decoration: none;
+}
+
+.navigation-buttons button.appel {
+    background-color: #28a745;
+}
+
+.navigation-buttons button:not(.appel) {
+    background-color: #007bff;
+}
+
+.navigation-buttons button:hover {
+    opacity: 0.9;
+}

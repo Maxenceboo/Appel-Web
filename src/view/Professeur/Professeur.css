@@ -32,9 +32,7 @@
     color: #333;
 }
 
-.selection-container:hover {
-    transform: translateY(-10px);
-}
+
 
 .select-group {
     margin-bottom: 2rem;

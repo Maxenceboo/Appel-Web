@@ -7,19 +7,19 @@ https://github.com/Maxenceboo/api-uppa-tools
 ## todo
 
 - [ ] Migration  
-- [ ] vue professeur
+- [x] vue professeur
     - [x] delete scroll bar view Professeur 
     - [x] add request
         - [x] getPromo
         - [x] getGrpsPromoByProf
-    - [ ] implement request
+    - [x] implement request
         - [x] getPromo
-        - [ ] getGrpsPromoByProf
-    - [ ] delete animation
+        - [x] getGrpsPromoByPromo
+    - [x] delete animation
 - [ ] vue responsable
     - [x] corriger la barre du gradient (background)
-    - [ ] centre
-    - [ ] voir pour add sous groupe by promo
+    - [ ] centrer le container☝️🤓👌
+    - [x] voir pour add sous groupe by promo
     - [ ] add request
     - [ ] menu
         - [ ] add/delete promo
@@ -33,7 +33,7 @@ https://github.com/Maxenceboo/api-uppa-tools
     - [x] add scroll bar for container (overflow)
 - [ ] vue login
     - [ ] change size of container
-- [ ] vue home
+- [x] vue home
 - [ ] docker
     - [ ] add dockerfile
     - [ ] add docker-compose
@@ -41,7 +41,9 @@ https://github.com/Maxenceboo/api-uppa-tools
 - [ ] locale storage (token) (https://www.digitalocean.com/community/tutorials/js-introduction-localstorage-sessionstorage)
     - [ ] redirect to login if token not exist or expired
 - [ ] documentation swagger (https://swagger.io/tools/swaggerhub/)
+- [ ] API
 
+- [ ] NE PAS CRAQUER !!!!! AHAHHAHAHAHAHHA
 
 
 
