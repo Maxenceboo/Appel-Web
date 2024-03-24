@@ -4,7 +4,7 @@ sprint 1 :
 	- usc 
 	- db
 	- setup env work
-	- processuce diagramme
+	- processus diagramme
 
 
 sprint 2 :
@@ -13,10 +13,11 @@ sprint 2 :
 	- secure vps
 
 sprint 3 :
-	- setup docker 
+	- setup docker (abandon)
 	- front
 	- api
 	- migration knex 
 
 sprint 4 : 
-
+	- verification api
+	- verification front

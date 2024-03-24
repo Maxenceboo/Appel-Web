@@ -16,7 +16,8 @@ const Login: React.FC = () => {
       let response = await axios.post('/auth/signin', {username, password});
       let token = response.data.token;  //on recupere le token
       localStorage.setItem('token', token); // on stocke le token dans le local storage
-      
+      localStorage.setItem('user', response.data.user);  //on stocke les infos de l'utilisateur dans le local storage
+    
       if (response.status === 200) {
         // Connexion réussie, redirigez l'utilisateur
         // history.push('/dashboard');
