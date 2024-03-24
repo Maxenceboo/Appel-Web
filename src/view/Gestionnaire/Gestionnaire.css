@@ -1,0 +1,128 @@
+.gestionnaire-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    font-family: 'Arial', sans-serif;
+    padding: 1rem;
+
+}
+
+.gestionnaire-group{
+    width: 100%;
+    max-width: 40rem;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    /* Responsive design */
+    @media (max-width: 768px) { /* Pour tablettes et petits écrans */
+        padding: 2rem;
+        max-width: 30rem;
+    }
+
+    @media (max-width: 480px) { /* Pour téléphones mobiles */
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+}
+
+.gestionnaire-group .input-group {
+    text-align: right;
+}
+.gestionnaire-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.etudiant-info {
+/*    grid 3x2*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.etudiant-info-select {
+    color: #6e8efb;
+}
+
+.gestionnaire-button {
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.gestionnaire-button:hover {
+    background-color: #7f9cfd;
+}
+
+.gestionnaire-textarea {
+    resize: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.input-textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.gestionnaire-call{
+    list-style: none;
+    padding: 0;
+
+    overflow-y: auto; /* Permet un défilement vertical si le contenu dépasse la hauteur du conteneur */
+    max-height: 10vh; /* Remplacez [hauteur souhaitée] par la hauteur maximale du conteneur */
+
+}
+
+
+.etudiant-info p {
+    display: flex;
+
+}
+
+.gestionnaire-etudiant h2 {
+    margin: 1rem;
+    padding: 0;
+}
+
+.gestionnaire-etudiant p {
+    margin: 0.5rem;
+}
+
+.gestionnaire-call-item label {
+    display: flex;
+    align-items: center; /* Alignement vertical au centre */
+    gap: 10px; /* Espace entre les éléments */
+}
+
+.gestionnaire-call-item p {
+    margin: 0; /* Enlève la marge par défaut des <p> */
+}
+
+.gestionnaire-call-item {
+    text-align: right;
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.gestionnaire-error {
+    color: red;
+    font-size: 0.8rem;
+}

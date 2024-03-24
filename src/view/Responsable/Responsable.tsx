@@ -6,6 +6,13 @@ type GroupesType = {
 };
 
 const Responsable: React.FC = () => {
+    // check valid token in local storage to prevent unauthorized access to the home page
+    // if (!localStorage.getItem('token')) {
+    //     return <Navigate to="/login" />;
+    // }
+    // if (!localStorage.getItem('user')) {
+    //     return <Navigate to="/login" />;
+    // }
     const [selectPromo, setSelectPromo] = useState<string>('');
     const [selectGroupe, setSelectGroupe] = useState<string>('');
     const [promotions, setPromotions] = useState<string[]>(['Licence 1 NEC', 'Licence 2 NEC', 'Licence 3 NEC']);

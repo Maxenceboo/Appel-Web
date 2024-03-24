@@ -11,7 +11,13 @@ interface Groupe {
 }
 
 const Professeur: React.FC = () => {
-
+	// check valid token in local storage to prevent unauthorized access to the home page
+	// if (!localStorage.getItem('token')) {
+	//     return <Navigate to="/login" />;
+	// }
+	// if (!localStorage.getItem('user')) {
+	//     return <Navigate to="/login" />;
+	// }
 	const [selectPromo, setSelectPromo] = useState('');
 	const [promo, setPromo] = useState<string[]>([]);
 	const [selectGroupe, setSelectGroupe] = useState('');
