@@ -36,11 +36,13 @@ const Home: React.FC = () => {
                 {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user') as string).role === 'admin' && <Link to="/home"><button type="button">Gestion Utilisateurs</button></Link>}
                 {localStorage.getItem('user') && (JSON.parse(localStorage.getItem('user') as string).role === 'professeur' || JSON.parse(localStorage.getItem('user') as string).role === 'responsable') && <Link to="/professeur"><button type="button">Appel</button></Link>}
                 {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user') as string).role === 'responsable' && <Link to="/responsable"><button type="button">Liste Étudiants</button></Link>}
-                {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user') as string).role === 'gestionnaire' && <Link to="/gestionnaire"><button type="button">Gestion des absence</button></Link>}
+                {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user') as string).role === 'gestionnaire' && <Link to="/addEtudiant"><button type="button">Gestion des absence</button></Link>}
+                
                 <Link to="/professeur"><button type="button">Appel</button></Link>   
                 <Link to="/professeur"><button type="button">Liste Étudiants</button></Link>
                 <Link to="/responsable"><button type="button">Gestion Listes</button></Link>
                 <Link to="/gestionnaire"><button type="button">Gestion des absence</button></Link>
+                <Link to="/addEtudiant"><button type="button">Absence</button></Link>
                 <button type="button" onClick={handleLogout}>Déconnexion</button>
             </div>
         </div>

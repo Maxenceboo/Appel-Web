@@ -1,0 +1,56 @@
+.AddEtudiant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    font-family: 'Arial', sans-serif;
+    padding: 1rem;
+}
+
+.AddEtudiant-group {
+width: 100%;
+max-width: 40rem;
+padding: 2.5rem;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+/* Responsive design */
+@media (max-width: 768px) { /* Pour tablettes et petits écrans */
+    padding: 2rem;
+    max-width: 30rem;
+}
+
+@media (max-width: 480px) { /* Pour téléphones mobiles */
+    padding: 1.5rem;
+    max-width: 100%;
+}
+
+
+}
+
+.AddEtudiant-form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+list-style: none;
+padding: 0;
+
+overflow-y: auto; /* Permet un défilement vertical si le contenu dépasse la hauteur du conteneur */
+max-height: 50vh; /* Remplacez [hauteur souhaitée] par la hauteur maximale du conteneur */
+}
+
+.AddEtudiant-button {
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.AddEtudiant-button:hover {
+    background-color: #7f9cfd;
+}

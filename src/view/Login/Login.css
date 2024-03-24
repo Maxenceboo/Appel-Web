@@ -47,6 +47,27 @@
     color: #bbb;
 }
 
+.input-group select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.input-group select:focus {
+    outline: none;
+    border-color: #7a77e3;
+    box-shadow: 0 0 5px rgba(122, 119, 227, 0.5);
+}
+
+.input-group select::placeholder {
+    color: #bbb;
+}
+
+
+
 button.login-button[type="submit"] {
     width: 100%;
     padding: 10px 15px;

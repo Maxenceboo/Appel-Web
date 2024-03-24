@@ -6,7 +6,9 @@ import Professeur from '../Professeur/Professeur';
 import Appel from '../Appel/Appel';
 import Home from '../Home/Home';
 import Gestionnaire from '../Gestionnaire/Gestionnaire';
+import AddEtudiant from '../AddEtudiant/AddEtudiant';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
       <Route path="/appel" Component={Appel} />
       <Route path="/home" Component={Home} />
       <Route path="/gestionnaire" Component={Gestionnaire} />
+      <Route path="/addEtudiant" Component={AddEtudiant} />
     </Routes>
   </Router>
   );
